@@ -112,10 +112,11 @@ function TodoList() {
     });
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="h-screen flex flex-col ">
             <Navbar username={username} />
-            <div className="min-h-screen bg-gradient-to-br from-blue-100 to-white flex items-center justify-center px-4 py-2">
-                <div className="bg-gradient-to-br from-blue-100 to-white bg-opacity-90 w-full max-w-4xl rounded-xl shadow-lg p-6  border-white border-2 z-20">
+            <div className="pt-8 flex-grow flex-col-reverse bg-gradient-to-br from-blue-100 to-white flex items-center justify-center ">
+
+                <div className="bg-gradient-to-br from-blue-100 to-white bg-opacity-90 w-full max-w-4xl rounded-xl shadow-lg p-6  border-white border-2 z-10 space-y-4">
                     <h2 className="text-2xl font-bold mb-4">
                         {editId ? "Edit Task" : "Add New Task"}
                     </h2>

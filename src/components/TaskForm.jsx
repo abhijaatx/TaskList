@@ -15,7 +15,7 @@ function TaskForm({ formData, setFormData, handleAddTask, isEditing, setEditId }
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
             />
             <select
-                className="w-full border px-4 py-2 rounded"
+                className="w-full border px-4 py-2 rounded h-8"
                 value={formData.priority}
                 onChange={(e) => setFormData({ ...formData, priority: e.target.value })}
             >

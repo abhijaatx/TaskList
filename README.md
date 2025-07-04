@@ -71,23 +71,23 @@ npm run dev
 
 ---
 
-## Usage
+## ✅ Usage
 
--** Visit / and enter your username to start using the app.**
--** Use the form to add new tasks.**
--** Click edit (✏️) to update a task.**
--** Filter and search tasks easily.**
--** All data is saved per user in localStorage.**
-
+- Visit `/` and enter your username to start using the app.  
+- Use the form to add new tasks.  
+- Click **edit (✏️)** to update a task.  
+- Filter and search tasks easily.  
+- All data is saved per user in `localStorage`.
 
 ---
 
+## 📝 Notes
 
-## Notes
+- Task edits are handled through shared form state (`formData` + `editId`).  
+- Each username stores a separate list of tasks.  
+- Uses controlled inputs for reliable form behavior.
 
--** Task edits are handled through shared form state (formData + editId).**
--** Each username stores a separate list of tasks.**
--** Uses controlled inputs for form reliability.**
+---
 
 
 

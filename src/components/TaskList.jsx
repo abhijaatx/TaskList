@@ -1,6 +1,6 @@
 import TaskItem from "./TaskItem";
 
-function TaskList({ tasks, handleDelete, handleToggleComplete }) {
+function TaskList({ tasks, handleDelete, handleToggleComplete, handleEdit }) {
     if (tasks.length === 0) {
         return <p className="text-gray-500 text-center">No tasks found.</p>;
     }
@@ -18,6 +18,7 @@ function TaskList({ tasks, handleDelete, handleToggleComplete }) {
                     task={task}
                     onDelete={() => handleDelete(task.id)}
                     onToggleComplete={() => handleToggleComplete(task.id)}
+                    onEdit={() => handleEdit(task.id)}
                 />
             ))}
         </div>

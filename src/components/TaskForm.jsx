@@ -1,4 +1,4 @@
-function TaskForm({ formData, setFormData, handleAddTask }) {
+function TaskForm({ formData, setFormData, handleAddTask, isEditing, setEditId }) {
     return (
         <form onSubmit={handleAddTask} className="grid gap-4">
             <input
@@ -19,9 +19,9 @@ function TaskForm({ formData, setFormData, handleAddTask }) {
                 value={formData.priority}
                 onChange={(e) => setFormData({ ...formData, priority: e.target.value })}
             >
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
+                <option>Low Priority</option>
+                <option>Medium Priority</option>
+                <option>High Priority</option>
             </select>
             <input
                 type="date"
@@ -39,8 +39,26 @@ function TaskForm({ formData, setFormData, handleAddTask }) {
                 type="submit"
                 className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
             >
-                + Add Task
+                {isEditing ? "Update Task" : "Add Task"}
             </button>
+            {isEditing && (
+                <button
+                    type="button"
+                    onClick={() => {
+                        setFormData({
+                            title: "",
+                            description: "",
+                            priority: "Medium",
+                            dueDate: "",
+                            category: "",
+                        });
+                        setEditId(null);
+                    }}
+                    className="bg-red-500 w-full px-4 py-2 rounded text-white"
+                >
+                    Cancel
+                </button>
+            )}
         </form>
     );
 }

@@ -5,8 +5,8 @@ function Navbar({ username }) {
     const navigate = useNavigate();
 
     const onLogout = () => {
-        localStorage.removeItem("username"); // Only remove username
-        navigate("/"); // Redirect to login
+        localStorage.removeItem("username");
+        navigate("/");
     };
 
     return (
